@@ -76,11 +76,11 @@ developed by
 <meta name="text:Page Width" content="1100" />
 <meta name="text:Column Width" content="1100" />
 <meta name="text:Webkit Scrollbar Width" content="15" />
-<meta name="text:Bottom Copy" content='Running on <a href="http://thedefaultnetwork.tumblr.com/">The Default Network</a> '/>
+<!-- <meta name="text:Bottom Copy" content='Running on <a href="http://thedefaultnetwork.tumblr.com/">The Default Network</a> '/> -->
 
 <!--  links -->
-
-<link rel="shortcut icon" href="{Favicon}" />
+<!-- <link rel="shortcut icon" href="{Favicon}" /> -->
+<link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/btxtfjbjr0dug26/favicon.ico" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
 
 <!--  theme css -->
@@ -92,6 +92,11 @@ developed by
 html,body,p,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}:focus{outline:0;}
 
 /*  base styles   */
+
+@font-face {
+    font-family: 'futura'; 
+    src: url(‘https://dl.dropboxusercontent.com/s/goqjwrnufnk3aqn/Futura.ttc’); 
+}
 
 html{
   -webkit-font-smoothing: antialiased;
@@ -382,7 +387,9 @@ p{
 <!--  custom css  -->
 
 <style type="text/css" media="screen">
-{CustomCSS}
+body, a, .heading, h1, h2, h3, h4, h5 {
+    font-family: 'futura';
+}
 </style>
 
 </head>
@@ -406,8 +413,10 @@ p{
           {block:IfNotHeaderImage}{block:IfShowBlogTitle}<div class="heading"><a href="/">{Title}</a></div>{/block:IfShowBlogTitle}{/block:IfNotHeaderImage}
           {block:IfShowBlogDescription}<p>{Description}</p>{/block:IfShowBlogDescription}
           {block:IfShowPagesInHeader}{block:HasPages}{block:Pages}<div class="meta"><a href="{URL}" >{Label}</a></div>{/block:Pages}{/block:HasPages}{/block:IfShowPagesInHeader}
-          {block:IfShowArchiveInHeader}<div class="meta"><a href="/archive">{lang:Archive}</a></div>{/block:IfShowArchiveInHeader}
-          {block:IfShowRSSInHeader}<div class="meta"><a href="{RSS}">{lang:RSS}</a></div>{/block:IfShowRSSInHeader}
+          <div class="meta"><a href="https://www.youtube.com/playlist?list=PL23NLYYIcBtz1i3PpGRvGjxMbEB3JKdB0">Playlist</a></div>
+          {block:IfShowArchiveInHeader}<div class="meta"><a href="/archive">{lang:Archive}</a></div>
+          
+          <!-- {block:IfShowRSSInHeader}<div class="meta"><a href="{RSS}">{lang:RSS}</a></div>{/block:IfShowRSSInHeader} -->
         </div>
       </div>
     {/block:IfShowHeader}
